@@ -12,6 +12,7 @@ namespace FlagQuizV2
 {
     public partial class Form1 : Form
     {
+        TestForm testForm;
         TrainForm trainForm;
         static int var1; 
 
@@ -22,7 +23,6 @@ namespace FlagQuizV2
 
         public Form1()
         {
-
             InitializeComponent();
         }
 
@@ -30,11 +30,17 @@ namespace FlagQuizV2
         {
             trainForm = new TrainForm(var1); // hier wordt TrainForm geïnstantieerd(aangemaakt).
             MessageBox.Show(var1.ToString()); //kleine test of de juiste data aan 'var1' wordt meegegeven
-            var selectedContinents = pickContinentBox.SelectedItem.ToString();
-            if(selectedContinents == "Asia")
+            var selectedContinents = pickContinentBox.SelectedItems.ToString();
+
+
+            if(selectedContinents == "4")
             {
                 this.Hide();
                 trainForm.Show();
+            }
+            else
+            {
+                MessageBox.Show("Please select 'Europe' as a testcase, other continents have to be implemented");
             }
         }
 
@@ -46,6 +52,24 @@ namespace FlagQuizV2
         private void button3_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void mainTestBtn_Click(object sender, EventArgs e)
+        {
+            testForm = new TestForm(var1); // hier wordt TestForm geïnstantieerd(aangemaakt).
+            MessageBox.Show(var1.ToString()); //kleine test of de juiste data aan 'var1' wordt meegegeven
+            var selectedContinents = pickContinentBox.SelectedItems.ToString();
+
+
+            if (selectedContinents != null)
+            {
+                this.Hide();
+                testForm.Show();
+            }
+            else
+            {
+                MessageBox.Show("Please select a continent");
+            }
         }
     }
 }

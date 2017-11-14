@@ -71,6 +71,7 @@
             this.mainTestBtn.TabIndex = 2;
             this.mainTestBtn.Text = "Test me";
             this.mainTestBtn.UseVisualStyleBackColor = true;
+            this.mainTestBtn.Click += new System.EventHandler(this.mainTestBtn_Click);
             // 
             // button3
             // 
@@ -84,11 +85,13 @@
             // 
             // pickContinentBox
             // 
+            this.pickContinentBox.CheckOnClick = true;
             this.pickContinentBox.FormattingEnabled = true;
             this.pickContinentBox.Items.AddRange(new object[] {
             "Asia",
             "Africa",
             "Australia",
+            "Europe",
             "North-America",
             "South-America"});
             this.pickContinentBox.Location = new System.Drawing.Point(201, 116);
