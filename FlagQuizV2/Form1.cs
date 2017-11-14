@@ -29,7 +29,7 @@ namespace FlagQuizV2
         private void mainTrainBtn_Click(object sender, EventArgs e)
         {
             trainForm = new TrainForm(var1); // hier wordt TrainForm geïnstantieerd(aangemaakt).
-            MessageBox.Show(var1.ToString());
+            MessageBox.Show(var1.ToString()); //kleine test of de juiste data aan 'var1' wordt meegegeven
             var selectedContinents = pickContinentBox.SelectedItem.ToString();
             if(selectedContinents == "Asia")
             {
