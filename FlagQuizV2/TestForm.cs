@@ -40,31 +40,38 @@ namespace FlagQuizV2
                 pictureBox1.Image = picArray[1];
                 denmarkBtn.Checked = false;
                 score = 1;
+                MessageBox.Show("Current score: " + score);
             }
             else if (pictureBox1.Image == picArray[1] && finlandBtn.Checked == true)
             {
                 MessageBox.Show("Correct!" + score);
                 pictureBox1.Image = picArray[2];
                 score += 1;
+                MessageBox.Show("Current score: "+ score);
 
             }
             else if (pictureBox1.Image == picArray[2] && icelandBtn.Checked == true)
             {
                 MessageBox.Show("Correct!");
                 pictureBox1.Image = picArray[3];
+                score += 1;
+                MessageBox.Show("Current score: " + score);
             }
             else if (pictureBox1.Image == picArray[3] && norwayBtn.Checked == true)
             {
                 MessageBox.Show("Correct!");
                 pictureBox1.Image = picArray[4];
+                MessageBox.Show("Current score: " + score);
             }
             else if (pictureBox1.Image == picArray[4] && swedenBtn.Checked == true)
             {
                 MessageBox.Show("Correct!");
+                pictureBox1.Image = null;
+                MessageBox.Show("Current score: " + score);
             }
             else
             {
-                MessageBox.Show("Wrong!");
+                MessageBox.Show("Wrong! Try again!");
             }
         }
 

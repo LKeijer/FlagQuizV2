@@ -47,6 +47,7 @@ namespace FlagQuizV2
         private void pickContinentBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             var1 = pickContinentBox.SelectedIndex; //Hier geef ik de index van het geselecteerde continent mee aan var1.
+           
         }
 
         private void button3_Click(object sender, EventArgs e)
